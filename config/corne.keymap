@@ -18,6 +18,10 @@ https://zmk.dev/docs/behaviors/hold-tap
 &ht_bl LSHIFT F
 &ht_tp
 
+
+https://zmk.dev/docs/behaviors/layers#layer-tap
+lt
+
 */
 
 
@@ -28,9 +32,9 @@ https://zmk.dev/docs/behaviors/hold-tap
                 default_layer {
                         bindings = <
    &kp ESC   &kp Q             &kp W            &kp E             &kp R              &kp T    &kp Y     &kp U              &kp I            &kp O           &kp P              &kp BSPC
-   &kp TAB   &mt LCTRL A       &mt LALT S       &mt LGUI  D    &mt LSHIFT F    &kp G    &kp H     &mt RSHIFT J    &mt RGUI K    &mt  RALT L    &mt LCTRL SEMI  &kp SQT
+   &kp TAB   &mt LCTRL A       &mt LALT S       &mt LGUI  D       &mt LSHIFT F       &kp G    &kp H     &mt RSHIFT J       &mt RGUI K       &mt  RALT L     &mt LCTRL SEMI     &kp SQT
    &kp LCTRL &kp Z             &kp X            &kp C             &kp V              &kp B    &kp N     &kp M              &kp COMMA        &kp DOT         &kp FSLH           &kp ESC
-   &kp LGUI  &mo 1             &kp RET          &kp SPACE         &mo 2              &kp RALT
+   &kp LGUI  &lt 1 BSPC        &kp RET          &kp SPACE         &lt 2 DEL            &kp RALT
                         >;
                 };
 
