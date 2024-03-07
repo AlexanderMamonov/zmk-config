@@ -53,7 +53,7 @@ untill the tapping-term-ms
             bindings = <
 &gresc     &kp Q        &kp W       &kp E       &kp R         &kp T      &kp Y      &kp U         &kp I       &kp O       &kp P           &kp LEFT_BRACKET
 &kp TAB    &hm LCTRL A  &hm LALT S  &hm LGUI D  &hm LSHIFT F  &kp G      &kp H      &hm RSHIFT J  &hm RGUI K  &hm RALT L  &hm LCTRL SEMI  &kp SQT
-&kp LCTRL  &kp Z        &kp X       &kp C       &kp V         &lt 3 B    &kp N      &kp M         &kp COMMA   &kp DOT     &kp FSLH        &kp ESC
+&kp LCTRL  &kp Z        &kp X       &kp C       &kp V         &lt 4 B    &kp N      &kp M         &kp COMMA   &kp DOT     &kp FSLH        &kp ESC
                                     &kp LGUI    &lt 1 BSPC    &kp RET    &kp SPACE  &lt 2 DEL     &kp RALT
             >;
         };
@@ -88,6 +88,15 @@ untill the tapping-term-ms
             >;
         };
 
+        layer_4 {
+            bindings = <
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6  &kp F7  &kp F7  &kp F8  &kp F9  &kp F10
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
         bt_layer {
             bindings = <
 &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
@@ -98,4 +107,3 @@ untill the tapping-term-ms
         };
     };
 };
-
