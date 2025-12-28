@@ -96,7 +96,7 @@ untill the tapping-term-ms
 
         anki_layer {
             bindings = <
-&to 0        &none      &none   &none   &none   &none    &none      &none   &none   &none  &none  &none
+&to 0        &none      &none   &none   &kp R   &none    &none      &none   &none   &none  &none  &none
 &none        &kp MINUS  &none   &none   &kp N2  &none    &none      &kp N4  &kp N3  &none  &none  &none
 &kp AT_SIGN  &none      &none   &none   &none   &none    &none      &none   &none   &none  &none  &none
                                 &none   &none   &kp N1   &kp SPACE  &none   &none
