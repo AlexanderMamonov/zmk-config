@@ -1,0 +1,5 @@
+name: zmk-config-wake-cycle
+build:
+  cmake: .
+  settings:
+    dts_root: .

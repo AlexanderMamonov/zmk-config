@@ -11,6 +11,58 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+
+/ {
+    behaviors {
+        wake_cycle: wake_cycle {
+            compatible = "zmk,behavior-wake-cycle";
+            #binding-cells = <0>;
+        };
+    };
+};
+
+/*
+online visual editor
+https://nickcoutsos.github.io/keymap-editor/
+*/
+/*
+
+Information about tapinng and holding
+https://zmk.dev/docs/behaviors/hold-tap
+
+&ht_bl LSHIFT F
+&ht_tp
+
+
+https://zmk.dev/docs/behaviors/layers#layer-tap
+lt
+
+*/
+/*
+here I define hm. This is howrow mods it has tap preferred flovor, that means
+that even if another key presed meanwhile this one on hold it will prefer tap
+untill the tapping-term-ms
+*/
+
+/ {
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "homerow mods";
+            #binding-cells = <2>;
+            tapping-term-ms = <225>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+};
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+
 /*
 online visual editor
 https://nickcoutsos.github.io/keymap-editor/
@@ -89,7 +141,7 @@ untill the tapping-term-ms
 
         bt_layer {
             bindings = <
-&none       &to 0         &trans        &trans        &sys_reset    &trans          &trans  &sys_reset  &trans  &trans  &soft_off  &trans
+&none       &to 0         &trans        &trans        &sys_reset    &trans          &trans  &sys_reset  &trans  &trans  &wake_cycle &trans
 &trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &to 5       &trans  &trans  &trans     &trans
 &bt BT_CLR  &trans        &trans        &to 6         &trans        &trans          &trans  &to 7       &trans  &trans  &trans     &trans
                                         &trans        &trans        &trans          &trans  &trans      &trans
